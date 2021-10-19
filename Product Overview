@@ -1,0 +1,24 @@
+##############################################################################################
+a. product vision
+    This software product is mainly aimed at all members in a small range, such as all teachers and students of Jinan University.
+    The product is still in the development stage, the ideal effect is to provide a platform for all teachers and students to share messages, different from WeChat moments, QQ and other social software users can share the same platform within a certain range by downloading the software, namely Ji Circle of friends Users can freely express their opinions on the platform and choose whether to be anonymous or not. The information published has the function of whether it has been read or not and the function of deleting it.
+    It can effectively put each individual in a collective into the same platform, so that information can be effectively circulated within a certain range. Students can also directly put forward suggestions to teachers and leaders in an anonymous way, avoiding the tedious traditional mailbox The product has a promising application prospect and can be copied in small groups such as companies and enterprises, providing a platform for different individuals to communicate and an opportunity to make suggestions in relative confidentiality.
+
+##############################################################################################
+b. User stories
+    As a student who is busy with school works, I want to be able to post messages that ask for someone to help to deliver my takeaways and express them to me, which would save a few hours every day so that I could focus more on works.
+    As a student who devotes himself to school life, I want a platform to post the moments of life and a place to give feedback to school staff so that to have a better and better environment for everyone to live in and enjoy.
+    As a student who is doing work-study, I want to have a website to pick few easy works in school to lighten my financial burden. These works should be easy and convenient to finish, like delivering takeaways and express because I can finish several tasks at one time.
+    As an organizer of a school club, I want to have a community that is aimed at students in our school, to post the information of our club and the events we will organize so that we could have more compatible participants.
+    As a staff, I want to have a place to hear from students, which could help us know how are students feeling about their current school life and school works. With everyone’s share and feedback, we could know where we will go and what we will do next.
+    
+##############################################################################################
+c. Scenario
+Scenario 1:
+    Some college students want to put forward opinions on some work of the school, but many of them don't know an efficient way to deliver the message, so they can express their opinions on the software developed by us because the software can let all users see the news they publish. 
+    At the same time, D, who carries out relevant work in the school, also wants to collect some students' opinions for better work, but D can only reach few students, so it may be difficult to collect enough opinions. However, on the software we developed, D can see the news released by the students using the software in the whole school. After seeing the relevant news on the software, D referred to the opinions put forward by the students, and the adjusted work served the students better.
+
+Scenario 2:
+    Tom is a careless person, not good at social, and always forget to take things, a lot of time, when he returned from the canteen dormitory, or from the airport, suddenly found something fell in the airport or canteen, the canteen is good, almost can go to take, but the airport is too far, to do a long time car will spend a lot of money.
+So Tom wanted a platform to post information. After his classmate saw the information, he could pay him for something if he could help bring things with him. He originally wanted to use the circle of friends to complete, but his number of Moments was too small, it was difficult to send the circle of friends to collect students, and may not necessarily see, reply to him in time.
+    So his roommates recommended our products to him, including all registered Jinan University students, students in need of help (Tom) can send demand posts, ask if someone to help me take items at the airport, if someone just willing to help at the airport, he can take Tom's demand sheet, help Tom easily bring, he got Tom a certain commission, and Tom can get his left items.
