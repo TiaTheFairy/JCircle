@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".new_announce">
+
+    <TextView
+        android:id="@+id/topTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#6E1482"
+        android:gravity="center_horizontal"
+        android:text="Announce"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topTitle" />
+    <ImageButton
+        android:id="@+id/add"
+        android:clickable="true"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerInside"
+        android:layout_alignParentEnd="true"
+        android:background="#00FF0000"
+        android:src="@drawable/tianjia"
+        android:layout_alignParentBottom="true"
+        android:focusable="true" />
+
+    <ImageButton
+        android:id="@+id/backtop"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/add"
+        android:layout_alignParentEnd="true"
+        android:background="#00ff0000"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/backtop"
+        android:visibility="gone"/>
+</RelativeLayout>
