@@ -9,6 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.JCircle">
+        <activity android:name=".new_announce" android:exported="true"/>
+        <activity android:name=".Activity_message_input" android:exported="true"/>
+        <activity android:name=".create_ticket" android:exported="true"/>
+        <activity android:name=".Edit_id" android:exported="true"/>
+        <activity android:name=".head_choise" android:exported="true"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
