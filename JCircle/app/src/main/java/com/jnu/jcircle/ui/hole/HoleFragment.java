@@ -1,45 +1,80 @@
 package com.jnu.jcircle.ui.hole;
 
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
+import com.jnu.jcircle.ui.hole.Adapter.AccountAdapter;
+import com.jnu.jcircle.ui.hole.Pages.AccountBean;
+import com.jnu.jcircle.R;
+import com.jnu.jcircle.ui.hole.Pages.DBmanager;
 
-import com.jnu.jcircle.databinding.FragmentDashboardBinding;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
 
-public class HoleFragment extends Fragment {
-
-    private HoleViewModel holeViewModel;
-    private FragmentDashboardBinding binding;
+public class HoleFragment extends Fragment implements View.OnClickListener{
+    //注册对象
+    ListView mainlistview;//主页留言情况
+    List<AccountBean> mDatas; //数据源
+    private AccountAdapter accountAdapter;  //适配器
+    int year,month,day;
+    ImageButton addBtn;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        holeViewModel =
-                new ViewModelProvider(this).get(HoleViewModel.class);
+        View view=View.inflate(getActivity(),R.layout.activity_holemain,null);
 
-        binding = FragmentDashboardBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
-
-        final TextView textView = binding.textDashboard;
-        holeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
-        return root;
+        initTime();       //获取时间
+        mainlistview=view.findViewById(R.id.list_main);
+        addBtn=view.findViewById(R.id.add_button_main);
+        mDatas=new ArrayList<>();
+        //设置适配器，加载数据到主页面ListView中
+        accountAdapter = new AccountAdapter(getActivity(),mDatas);
+        mainlistview.setAdapter(accountAdapter);   //引入数据源适配器在Listview的数据源中
+        addBtn.setOnClickListener(this);
+        return view;
     }
 
+    //获取焦点就加载
+    public void onResume(){
+        super.onResume();
+        loadDBdata();
+    }
+
+    private void loadDBdata() {
+        List<AccountBean>list = DBmanager.getDayAccountFromtb(year, month, day);
+        mDatas.clear();
+        mDatas.addAll(list);
+        accountAdapter.notifyDataSetChanged();
+
+    }
+
+    //获取今日时间
+    private void initTime() {
+        Calendar calendar=Calendar.getInstance();
+        year=calendar.get(Calendar.YEAR);
+        month=calendar.get(Calendar.MONTH)+1;
+        day=calendar.get(Calendar.DAY_OF_MONTH);
+    }
+
+
     @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
+    public void onClick(View view) {
+        switch (view.getId()){     //点击添加  使用Intent连接其他界面，点击添加后跳转到记录界面
+            case R.id.add_button_main:
+                Intent itl = new Intent(getActivity(),PagerFragment.class);
+                startActivity(itl);
+                break;
+        }
+
     }
 }

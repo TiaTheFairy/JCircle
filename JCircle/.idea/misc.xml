@@ -13,10 +13,17 @@
         <entry key="..\:/Android_Dev/TEAM/JCircle/app/src/main/res/layout/fragment_tickets.xml" value="0.328125" />
         <entry key="..\:/Android_Dev/TEAM/JCircle/app/src/main/res/layout/holder_ticket.xml" value="0.328125" />
         <entry key="..\:/Android_Dev/TEAM/JCircle/app/src/main/res/menu/bottom_nav_menu.xml" value="0.21666666666666667" />
+        <entry key="..\:/soft/JCircle/JCircle/app/src/main/res/drawable/good.xml" value="0.21354166666666666" />
+        <entry key="..\:/soft/JCircle/JCircle/app/src/main/res/drawable/liuyan_btn_sure.xml" value="0.21354166666666666" />
+        <entry key="..\:/soft/JCircle/JCircle/app/src/main/res/drawable/main_add_background.xml" value="0.21354166666666666" />
+        <entry key="..\:/soft/JCircle/JCircle/app/src/main/res/layout/activity_holemain.xml" value="0.1793478260869565" />
+        <entry key="..\:/soft/JCircle/JCircle/app/src/main/res/layout/activity_holepager.xml" value="0.1671875" />
+        <entry key="..\:/soft/JCircle/JCircle/app/src/main/res/layout/fragment_holegridview.xml" value="0.1671875" />
+        <entry key="..\:/soft/JCircle/JCircle/app/src/main/res/layout/item_holemain.xml" value="0.1671875" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

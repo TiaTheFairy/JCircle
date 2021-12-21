@@ -7,14 +7,16 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:name=".ui.hole.Unitapp"
         android:supportsRtl="true"
         android:theme="@style/Theme.JCircle">
-        <activity android:name=".new_announce" android:exported="true"/>
-        <activity android:name=".Activity_message_input" android:exported="true"/>
-        <activity android:name=".create_ticket" android:exported="true"/>
-        <activity android:name=".Edit_id" android:exported="true"/>
-        <activity android:name=".head_choise" android:exported="true"/>
-
+        <activity android:name=".ui.news.new_announce" android:exported="true"/>
+        <activity android:name=".ui.trade.create_ticket" android:exported="true"/>
+        <activity android:name=".ui.user.Edit_id" android:exported="true"/>
+        <activity android:name=".ui.user.head_choise" android:exported="true"/>
+        <activity android:name=".ui.user.Activity_message_input" android:exported="true"/>
+<!--        <activity android:name=".ui.hole.HoleFragment" android:exported="true" />-->
+        <activity android:name=".ui.hole.PagerFragment" android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
