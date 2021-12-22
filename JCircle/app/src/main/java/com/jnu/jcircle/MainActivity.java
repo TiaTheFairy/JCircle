@@ -45,11 +45,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    ActivityResultLauncher<Intent> launcherId = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
-        public void onActivityResult(ActivityResult result) {
-            ;
-        }       //响应跳转到个人信息界面，但什么都不做
-    });
+ 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -62,8 +58,9 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_id:        //响应点击右上角菜单第一个按钮跳转到个人信息界面
-                Intent intent = new Intent(MainActivity.this.getBaseContext(), Edit_id.class);
-                launcherId.launch(intent);
+                Intent intent=new Intent();
+                intent.setClass(MainActivity.this.getBaseContext(),Edit_id.class);
+                startActivity(intent);
                 return true;
             case R.id.action_log_out:   //响应点击右上角菜单第二个按钮直接退出程序
                 android.os.Process.killProcess(android.os.Process.myPid());
