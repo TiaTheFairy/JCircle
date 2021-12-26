@@ -18,6 +18,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.jnu.jcircle.databinding.ActivityMainBinding;
+import com.jnu.jcircle.ui.login.LoginActivity;
 import com.jnu.jcircle.ui.user.Edit_id;
 
 public class MainActivity extends AppCompatActivity {
@@ -64,6 +65,11 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.action_log_out:   //响应点击右上角菜单第二个按钮直接退出程序
                 android.os.Process.killProcess(android.os.Process.myPid());
+            case R.id.action_log_in:
+                Intent intent2=new Intent();
+                intent2.setClass(MainActivity.this.getBaseContext(), LoginActivity.class);
+                startActivity(intent2);
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }
