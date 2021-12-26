@@ -1,14 +1,18 @@
 package com.jnu.jcircle.ui.hole.Adapter;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.jnu.jcircle.ui.hole.AnimationTools;
+import com.jnu.jcircle.ui.hole.HoleFragment;
 import com.jnu.jcircle.ui.hole.Pages.AccountBean;
 import com.jnu.jcircle.R;
 import java.util.Calendar;
@@ -47,54 +51,80 @@ public class AccountAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View view, ViewGroup viewGroup) {
-        Viewholder viewholder=null;
+        final Viewholder viewholder;
+        AccountBean bean=mDatas.get(position);
         if(view==null){
             view=inflater.inflate(R.layout.item_holemain,viewGroup,false);
             viewholder=new Viewholder(view);
 
-            //
-            viewholder.dianzhan=(Button) view.findViewById(R.id.dianzhan) ;
-            viewholder.cai=(Button) view.findViewById(R.id.cai);
-            //
+            /////////
+            viewholder.dianzhaniv=(ImageView)view.findViewById(R.id.dianzhaniv);
+            viewholder.caiiv=(ImageView)view.findViewById(R.id.caiiv);
+            viewholder.dianzhantv=(TextView)view.findViewById(R.id.dianzhantv);
+            viewholder.caitv=(TextView)view.findViewById(R.id.caitv);
+            ///////
 
             view.setTag(viewholder);
         }
         else {
             viewholder=(Viewholder) view.getTag();
-
-            viewholder.dianzhan.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    System.out.println("aaa");
-                }
-            });
-            viewholder.cai.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //TO-DO Something
-                }
-            });
         }
-
         //从数据库拿资源
-        AccountBean bean=mDatas.get(position);
         viewholder.typeImageview.setImageResource(bean.getSimageId());
         viewholder.typeTextview.setText(bean.getName());
         viewholder.liuyanTextview.setText(bean.getLiuyan());
         viewholder.timeTextview.setText(bean.getTime());
+        //////////
+
+        if(bean.isZanFocus()){
+            viewholder.dianzhaniv.setImageResource(R.mipmap.dianzanred);
+        }else {
+            viewholder.dianzhaniv.setImageResource(R.mipmap.dianzan);
+        }
+        if(bean.isCaiFocus()){
+            viewholder.caiiv.setImageResource(R.mipmap.caired);
+        }else {
+            viewholder.caiiv.setImageResource(R.mipmap.cai);
+        }
+
+        viewholder.dianzhaniv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean flag= bean.isZanFocus();
+                bean.setZanFocus(!flag);
+                notifyDataSetChanged();
+                AnimationTools.scale(viewholder.dianzhaniv);
+            }
+
+        });
+        viewholder.caiiv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean flag= bean.isZanFocus();
+                bean.setCaiFocus(!flag);
+                notifyDataSetChanged();
+                AnimationTools.scale(viewholder.caiiv);
+            }
+
+        });
+
+        /////////
         return view;
     }
-    class Viewholder{  //传入布局Listview的每一个对象
-        ImageView typeImageview;
-        Button dianzhan,cai;
-        TextView typeTextview,liuyanTextview,timeTextview;
+
+
+    class Viewholder{
+         //传入布局Listview的每一个对象
+        ImageView typeImageview,dianzhaniv,caiiv;
+        TextView typeTextview,liuyanTextview,timeTextview,dianzhantv,caitv;
         public Viewholder(View view){
             typeImageview=view.findViewById(R.id.item_mainlist_image);
             typeTextview=view.findViewById(R.id.item_mainlist_title);
             liuyanTextview=view.findViewById(R.id.item_mainlist_liuyan);
             timeTextview=view.findViewById(R.id.item_mainlist_time);
-            dianzhan=view.findViewById(R.id.dianzhan);
-            cai=view.findViewById(R.id.cai);
         }
     }
+
 }
+
+

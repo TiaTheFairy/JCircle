@@ -29,6 +29,7 @@ public class HoleFragment extends Fragment implements View.OnClickListener{
     int year,month,day;
     ImageButton addBtn;
 
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View view=View.inflate(getActivity(),R.layout.activity_holemain,null);
@@ -41,6 +42,10 @@ public class HoleFragment extends Fragment implements View.OnClickListener{
         accountAdapter = new AccountAdapter(getActivity(),mDatas);
         mainlistview.setAdapter(accountAdapter);   //引入数据源适配器在Listview的数据源中
         addBtn.setOnClickListener(this);
+
+        AccountBean bean=new AccountBean();
+        bean.setCaiFocus(false);
+        bean.setZanFocus(false);
         return view;
     }
 

@@ -10,6 +10,9 @@ public class AccountBean {
     String liuyan;//留言
     int year, month,day,flag;//myself_flag为1,others_支出为0
 
+    private boolean zanFocus, caiFocus;
+    private int zanNum, caiNum;
+
     public int getId() {
         return id;
     }
@@ -99,5 +102,35 @@ public class AccountBean {
         this.flag = flag;
     }
 
+    public boolean isCaiFocus() {
+        return caiFocus;
+    }
 
+    public void setCaiFocus(boolean caiFocus) {
+        this.caiFocus = caiFocus;
+    }
+
+    public int getCaiNum() {
+        return caiNum;
+    }
+
+    public void setCaiNum(int caiNum) {
+        this.caiNum = caiNum;
+    }
+
+    public boolean isZanFocus() {
+        return zanFocus;
+    }
+
+    public void setZanFocus(boolean zanFocus) {
+        this.zanFocus = zanFocus;
+    }
+
+    public int getZanNum() {
+        return zanNum;
+    }
+
+    public void setZanNum(int zanNum) {
+        this.zanNum = zanNum;
+    }
 }
