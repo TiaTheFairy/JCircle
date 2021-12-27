@@ -4,6 +4,7 @@ import androidx.annotation.Nullable;
 
 /**
  * Data validation state of the login form.
+ * log in结果的状态。
  */
 class LoginFormState {
     @Nullable

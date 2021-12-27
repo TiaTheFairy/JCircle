@@ -92,20 +92,50 @@ public class AccountAdapter extends BaseAdapter {
             public void onClick(View view) {
                 boolean flag= bean.isZanFocus();
                 bean.setZanFocus(!flag);
+                if(bean.isCaiFocus()){
+                    bean.setCaiFocus(flag);
+                }
                 notifyDataSetChanged();
                 AnimationTools.scale(viewholder.dianzhaniv);
             }
-
         });
-        viewholder.caiiv.setOnClickListener(new View.OnClickListener() {
+        viewholder.dianzhantv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 boolean flag= bean.isZanFocus();
+                bean.setZanFocus(!flag);
+                if(bean.isCaiFocus()){
+                    bean.setCaiFocus(flag);
+                }
+                notifyDataSetChanged();
+                AnimationTools.scale(viewholder.dianzhaniv);
+            }
+        });
+
+
+        viewholder.caiiv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean flag= bean.isCaiFocus();
                 bean.setCaiFocus(!flag);
+                if(bean.isZanFocus()){
+                    bean.setZanFocus(flag);
+                }
                 notifyDataSetChanged();
                 AnimationTools.scale(viewholder.caiiv);
             }
-
+        });
+        viewholder.caitv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean flag= bean.isCaiFocus();
+                bean.setCaiFocus(!flag);
+                if(bean.isZanFocus()){
+                    bean.setZanFocus(flag);
+                }
+                notifyDataSetChanged();
+                AnimationTools.scale(viewholder.caiiv);
+            }
         });
 
         /////////
