@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -62,7 +63,7 @@ public class userlogin extends AppCompatActivity {
                     else if(!(saver_users.mapPhone.containsValue(login_userPhone.getText().toString()))){
                         login_eulaLine.setVisibility(View.VISIBLE);
                     }
-                    login_userPhone.setFocusable(false);
+                    login_userPhone.setInputType(InputType.TYPE_NULL);
                     login_passwordLine.setVisibility(View.VISIBLE);
                 }
 
@@ -125,7 +126,7 @@ public class userlogin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 login_userPhone.setText("");
-                login_userPhone.setFocusable(true);
+                login_userPhone.setInputType(InputType.TYPE_CLASS_NUMBER);
                 login_password.setText("");
                 login_passwordLine.setVisibility(View.INVISIBLE);
                 login_eulaLine.setVisibility(View.INVISIBLE);

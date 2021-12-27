@@ -32,7 +32,9 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:imeOptions="actionDone"
-            android:singleLine="true"/>
+            android:singleLine="true"
+            android:inputType="number"
+            android:maxLength="11"/>
     </LinearLayout>
 
     <LinearLayout
@@ -57,7 +59,8 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:imeOptions="actionDone"
-            android:singleLine="true"/>
+            android:singleLine="true"
+            android:inputType="textPassword"/>
     </LinearLayout>
 
     <LinearLayout

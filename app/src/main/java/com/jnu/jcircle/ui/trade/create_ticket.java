@@ -72,6 +72,7 @@ public class create_ticket extends AppCompatActivity {
                         intent1.putExtra("time", time);
                         intent1.putExtra("tip", tip);
                         setResult(TradeFragment.RESULT_CREATE_SUCCESS, intent1);
+                        Toast.makeText(create_ticket.this, getString(R.string.ticket_new_created), Toast.LENGTH_LONG).show();
                         create_ticket.this.finish();
                     });
                     alertClaim.setNegativeButton(getString(R.string.ticket_new_cancel), (dialogInterface, i) -> {
