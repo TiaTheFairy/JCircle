@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/ASp/JCircle/app/src/main/res/layout/activity_new_announce.xml" value="0.4" />
+        <entry key="..\:/ASp/JCircle/app/src/main/res/layout/item_holemain.xml" value="0.4" />
+        <entry key="..\:/ASp/JCircle/app/src/main/res/layout/list_item.xml" value="0.536" />
         <entry key="..\:/Android/JCircle/JCircle/JCircle/app/src/main/res/layout/activity_holepager.xml" value="0.1793478260869565" />
         <entry key="..\:/Android/JCircle/JCircle/JCircle/app/src/main/res/layout/fragment_dashboard.xml" value="0.1793478260869565" />
         <entry key="..\:/Android_Dev/SE/JCircle/JCircle/app/src/main/res/layout/activity_login.xml" value="0.32864583333333336" />
