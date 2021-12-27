@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/ASp/JCircle/app/src/main/res/layout/activity_add_image.xml" value="0.2368659420289855" />
         <entry key="..\:/ASp/JCircle/app/src/main/res/layout/activity_new_announce.xml" value="0.4" />
         <entry key="..\:/ASp/JCircle/app/src/main/res/layout/item_holemain.xml" value="0.4" />
         <entry key="..\:/ASp/JCircle/app/src/main/res/layout/list_item.xml" value="0.536" />
@@ -20,12 +21,8 @@
         <entry key="..\:/Android_Dev/TEAM/JCircle/app/src/main/res/layout/fragment_tickets.xml" value="0.328125" />
         <entry key="..\:/Android_Dev/TEAM/JCircle/app/src/main/res/layout/holder_ticket.xml" value="0.328125" />
         <entry key="..\:/Android_Dev/TEAM/JCircle/app/src/main/res/menu/bottom_nav_menu.xml" value="0.21666666666666667" />
-        <entry key="..\:/System/Desktop/class/softwareprogramming/JCircle/app/src/main/res/layout/activity_eula.xml" value="0.26268115942028986" />
         <entry key="..\:/System/Desktop/class/softwareprogramming/JCircle/app/src/main/res/layout/activity_login.xml" value="0.2" />
-        <entry key="..\:/System/Desktop/class/softwareprogramming/JCircle/app/src/main/res/layout/activity_main.xml" value="0.26268115942028986" />
-        <entry key="..\:/System/Desktop/class/softwareprogramming/JCircle/app/src/main/res/layout/activity_userlogin.xml" value="0.26268115942028986" />
         <entry key="..\:/System/Desktop/class/softwareprogramming/JCircle/app/src/main/res/layout/fragment_dashboard.xml" value="0.28854166666666664" />
-        <entry key="..\:/System/Desktop/class/softwareprogramming/JCircle/app/src/main/res/layout/holder_ticket.xml" value="0.26268115942028986" />
         <entry key="..\:/System/Desktop/class/softwareprogramming/JCircle/app/src/main/res/menu/menu_main.xml" value="0.28854166666666664" />
         <entry key="..\:/soft/JCircle/JCircle/app/src/main/res/drawable/good.xml" value="0.21354166666666666" />
         <entry key="..\:/soft/JCircle/JCircle/app/src/main/res/drawable/liuyan_btn_sure.xml" value="0.21354166666666666" />

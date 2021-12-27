@@ -62,6 +62,9 @@ public class ListAdapter extends BaseAdapter{
             case "放假通知":
                 picture.setImageResource(R.drawable.rpicture4);
                 break;
+            default:
+                picture.setImageResource(R.drawable.rpicture5);
+                break;
         }
         return view;
 
