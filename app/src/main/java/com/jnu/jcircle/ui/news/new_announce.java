@@ -78,5 +78,9 @@ public class new_announce extends AppCompatActivity {
         setResult(0);
         finish();
     }
+
+    public void addImage(View view) {
+
+    }
 }
 
