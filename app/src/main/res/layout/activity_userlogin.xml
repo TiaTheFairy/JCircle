@@ -1,0 +1,114 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/login_pic"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/login_unknown"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="50dp"/>
+
+    <LinearLayout
+        android:id="@+id/login_IDLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/login_pic"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_phone"
+            android:textSize="20sp"
+            android:layout_marginEnd="20dp"/>
+
+        <EditText
+            android:id="@+id/login_userPhone"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_passwordLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_IDLine"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="@string/login_password"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/login_userPassword"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/login_passwordLine"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/login_next"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/login_next" />
+
+        <ImageView
+            android:id="@+id/login_reset"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/login_reset" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_eulaLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/login_buttons"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible">
+
+        <CheckBox
+            android:id="@+id/login_accept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_eula"
+            android:textSize="20sp"
+            android:checked="true"/>
+
+        <TextView
+            android:id="@+id/login_eula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="@string/login_view"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
