@@ -20,12 +20,23 @@ public class Activity_message_input extends AppCompatActivity {
 
         Intent intent2=getIntent();
         EditText editName = (EditText) findViewById(R.id.input_name);
-        EditText editId = (EditText) findViewById(R.id.input_id);       //获取姓名和ID的初始值
+        EditText editId = (EditText) findViewById(R.id.input_id);//获取姓名和ID的初始值
+        EditText editSex = (EditText) findViewById(R.id.input_sex);
+        EditText editAge = (EditText) findViewById(R.id.input_age);
+        EditText editXinZuo = (EditText) findViewById(R.id.input_xinZuo);
+
         String name1= intent2.getStringExtra("name");
         String id1=intent2.getStringExtra("id");
+        String sex1=intent2.getStringExtra("sex");
+        String age1=intent2.getStringExtra("age");
+        String xinZuo1=intent2.getStringExtra("xinZuo");
+
         if(null!=name1){
             editName.setText(name1);
             editId.setText(id1);
+            editSex.setText(sex1);
+            editAge.setText(age1);
+            editXinZuo.setText(xinZuo1);
         }
 
         Button buttonOk=this.findViewById(R.id.button_ook);
@@ -35,6 +46,9 @@ public class Activity_message_input extends AppCompatActivity {
                 Intent intent=new Intent();
                     intent.putExtra("name", editName.getText().toString());
                     intent.putExtra("id", editId.getText().toString());
+                intent.putExtra("sex", editSex.getText().toString());
+                intent.putExtra("age", editAge.getText().toString());
+                intent.putExtra("xinZuo", editXinZuo.getText().toString());
                 setResult(com.jnu.jcircle.ui.user.Edit_id.Result_edit,intent);
                 Activity_message_input.this.finish();
             }
