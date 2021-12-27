@@ -29,7 +29,6 @@ public class NewsFragment extends Fragment implements AdapterView.OnItemClickLis
     private ListView listView;
     private ImageButton Add;
     private ImageButton BTop;
-    private TextView Delete;
     private List<announceList> list;
     private List<announceList> Rlist;
     private View root;
@@ -53,7 +52,6 @@ public class NewsFragment extends Fragment implements AdapterView.OnItemClickLis
         helper=new DBHelper(getActivity());
         Add=root.findViewById(R.id.add);
         BTop=root.findViewById(R.id.backtop);
-        Delete=root.findViewById(R.id.delete);
         listView.setOnItemClickListener(this);
         //点击添加新的内容
         Add.setOnClickListener(new View.OnClickListener() {

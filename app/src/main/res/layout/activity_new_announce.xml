@@ -22,46 +22,57 @@
         android:id="@+id/et_announce_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
+        android:layout_below="@+id/et_announce_uname"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
         android:hint="Announce Title"
-        android:textColor="#ffbd27"
-        android:layout_below="@+id/et_announce_uname"/>
+        android:textColor="#ffbd27" />
 
     <EditText
         android:id="@+id/et_announce_details"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
-        android:hint="Announce Details"
-        android:textColor="#ffbd27"
         android:layout_below="@+id/et_announce_title"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:hint="Announce Details"
+        android:maxLines="3"
         android:minLines="2"
-        android:maxLines="3"/>
+        android:textColor="#ffbd27" />
 
-    <Button
-        android:onClick="okButton"
-        android:layout_width="100dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="发表"
-        android:textSize="20sp"
-        android:textColor="#333333"
-        android:background="#ffbd27"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true" />
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
 
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:onClick="noButton"
-        android:text="取消"
-        android:textSize="20sp"
-        android:textColor="#333333"
-        android:background="#ffbd27"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"/>
+        <Button
+            android:onClick="okButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="发表"
+            android:textSize="20sp"
+            android:textColor="#333333"
+            android:background="#ffbd27"
+            android:layout_margin="20dp"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="noButton"
+            android:text="取消"
+            android:textSize="20sp"
+            android:textColor="#333333"
+            android:background="#ffbd27"
+            android:layout_margin="20dp"/>
+    </LinearLayout>
+
+
 
 </RelativeLayout>
