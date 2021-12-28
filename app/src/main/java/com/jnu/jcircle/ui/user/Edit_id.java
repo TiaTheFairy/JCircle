@@ -28,12 +28,22 @@ public class Edit_id extends AppCompatActivity {
             int resultCode = result.getResultCode();
             if (resultCode ==Result_edit) {
                 if (null == data) return;
-                TextView name1=(TextView) findViewById(R.id.TextDate_name);
+                TextView name1=(TextView) findViewById(R.id.textDate_name);
                 TextView id1=(TextView) findViewById(R.id.TextDate_id);
+                TextView sex1=(TextView) findViewById(R.id.TextDate_sex);
+                TextView age1=(TextView) findViewById(R.id.TextDate_age);
+                TextView xinZuo1=(TextView) findViewById(R.id.TextDate_xinZuo);
                 String name = data.getStringExtra("name");
                 String id = data.getStringExtra("id");
+                String sex = data.getStringExtra("sex");
+                String age = data.getStringExtra("age");
+                String xinZuo = data.getStringExtra("xinZuo");
+
                 name1.setText(name);
                 id1.setText(id);
+                sex1.setText(sex);
+                age1.setText(age);
+                xinZuo1.setText(xinZuo);
                 Toast.makeText(Edit_id.this.getBaseContext(), "修改成功", Toast.LENGTH_LONG).show();
             }
         }
@@ -71,10 +81,134 @@ public class Edit_id extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent;
                 TextView idView=(TextView) findViewById(R.id.TextDate_id);
-                TextView nameView=(TextView) findViewById(R.id.TextDate_name);
+                TextView nameView=(TextView) findViewById(R.id.textDate_name);
+                TextView sexView=(TextView) findViewById(R.id.TextDate_sex);
+                TextView ageView=(TextView) findViewById(R.id.TextDate_age);
+                TextView xinView=(TextView) findViewById(R.id.TextDate_xinZuo);
                 intent=new Intent(Edit_id.this.getBaseContext(),Activity_message_input.class);
-                intent.putExtra("id", "原ID："+idView.getText().toString());
-                intent.putExtra("name","原昵称："+nameView.getText().toString());
+                intent.putExtra("id", idView.getText().toString());
+                intent.putExtra("name",nameView.getText().toString());
+                intent.putExtra("sex",sexView.getText().toString());
+                intent.putExtra("age",ageView.getText().toString());
+                intent.putExtra("xinZuo",xinView.getText().toString());
+
+                launcherEdit.launch(intent);
+
+            }
+
+        });
+        TextView textName=findViewById(R.id.textDate_name);
+        textName.setOnClickListener(new View.OnClickListener() {            //点击name后进入修改界面并把原来的信息传过去
+            @Override
+            public void onClick(View v) {
+                Intent intent;
+                TextView idView=(TextView) findViewById(R.id.TextDate_id);
+                TextView nameView=(TextView) findViewById(R.id.textDate_name);
+                TextView sexView=(TextView) findViewById(R.id.TextDate_sex);
+                TextView ageView=(TextView) findViewById(R.id.TextDate_age);
+                TextView xinView=(TextView) findViewById(R.id.TextDate_xinZuo);
+
+                intent=new Intent(Edit_id.this.getBaseContext(),Activity_message_input.class);
+                intent.putExtra("id", idView.getText().toString());
+                intent.putExtra("name",nameView.getText().toString());
+                intent.putExtra("sex",sexView.getText().toString());
+                intent.putExtra("age",ageView.getText().toString());
+                intent.putExtra("xinZuo",xinView.getText().toString());
+
+
+                launcherEdit.launch(intent);
+
+            }
+
+        });
+        TextView textId=findViewById(R.id.TextDate_id);
+        textId.setOnClickListener(new View.OnClickListener() {            //点击name后进入修改界面并把原来的信息传过去
+            @Override
+            public void onClick(View v) {
+                Intent intent;
+                TextView idView=(TextView) findViewById(R.id.TextDate_id);
+                TextView nameView=(TextView) findViewById(R.id.textDate_name);
+                TextView sexView=(TextView) findViewById(R.id.TextDate_sex);
+                TextView ageView=(TextView) findViewById(R.id.TextDate_age);
+                TextView xinView=(TextView) findViewById(R.id.TextDate_xinZuo);
+                intent=new Intent(Edit_id.this.getBaseContext(),Activity_message_input.class);
+                intent.putExtra("id", idView.getText().toString());
+                intent.putExtra("name",nameView.getText().toString());
+                intent.putExtra("sex",sexView.getText().toString());
+                intent.putExtra("age",ageView.getText().toString());
+                intent.putExtra("xinZuo",xinView.getText().toString());
+
+                launcherEdit.launch(intent);
+
+            }
+
+        });
+        TextView textSex=findViewById(R.id.TextDate_sex);
+        textSex.setOnClickListener(new View.OnClickListener() {            //点击name后进入修改界面并把原来的信息传过去
+            @Override
+            public void onClick(View v) {
+                Intent intent;
+                TextView idView=(TextView) findViewById(R.id.TextDate_id);
+                TextView nameView=(TextView) findViewById(R.id.textDate_name);
+                TextView sexView=(TextView) findViewById(R.id.TextDate_sex);
+                TextView ageView=(TextView) findViewById(R.id.TextDate_age);
+                TextView xinView=(TextView) findViewById(R.id.TextDate_xinZuo);
+
+                intent=new Intent(Edit_id.this.getBaseContext(),Activity_message_input.class);
+                intent.putExtra("id", idView.getText().toString());
+                intent.putExtra("name",nameView.getText().toString());
+                intent.putExtra("sex",sexView.getText().toString());
+                intent.putExtra("age",ageView.getText().toString());
+                intent.putExtra("xinZuo",xinView.getText().toString());
+
+
+                launcherEdit.launch(intent);
+
+            }
+
+        });
+        TextView textAge=findViewById(R.id.TextDate_age);
+        textAge.setOnClickListener(new View.OnClickListener() {            //点击name后进入修改界面并把原来的信息传过去
+            @Override
+            public void onClick(View v) {
+                Intent intent;
+                TextView idView=(TextView) findViewById(R.id.TextDate_id);
+                TextView nameView=(TextView) findViewById(R.id.textDate_name);
+                TextView sexView=(TextView) findViewById(R.id.TextDate_sex);
+                TextView ageView=(TextView) findViewById(R.id.TextDate_age);
+                TextView xinView=(TextView) findViewById(R.id.TextDate_xinZuo);
+
+                intent=new Intent(Edit_id.this.getBaseContext(),Activity_message_input.class);
+                intent.putExtra("id", idView.getText().toString());
+                intent.putExtra("name",nameView.getText().toString());
+                intent.putExtra("sex",sexView.getText().toString());
+                intent.putExtra("age",ageView.getText().toString());
+                intent.putExtra("xinZuo",xinView.getText().toString());
+
+
+                launcherEdit.launch(intent);
+
+            }
+
+        });
+        TextView textXin=findViewById(R.id.TextDate_xinZuo);
+        textXin.setOnClickListener(new View.OnClickListener() {            //点击name后进入修改界面并把原来的信息传过去
+            @Override
+            public void onClick(View v) {
+                Intent intent;
+                TextView idView=(TextView) findViewById(R.id.TextDate_id);
+                TextView nameView=(TextView) findViewById(R.id.textDate_name);
+                TextView sexView=(TextView) findViewById(R.id.TextDate_sex);
+                TextView ageView=(TextView) findViewById(R.id.TextDate_age);
+                TextView xinView=(TextView) findViewById(R.id.TextDate_xinZuo);
+
+                intent=new Intent(Edit_id.this.getBaseContext(),Activity_message_input.class);
+                intent.putExtra("id", idView.getText().toString());
+                intent.putExtra("name",nameView.getText().toString());
+                intent.putExtra("sex",sexView.getText().toString());
+                intent.putExtra("age",ageView.getText().toString());
+                intent.putExtra("xinZuo",xinView.getText().toString());
+
                 launcherEdit.launch(intent);
 
             }
@@ -101,23 +235,42 @@ public class Edit_id extends AppCompatActivity {
         });
         }
     public void saveData() {//保存数据在本文件内
-        TextView names=(TextView) findViewById(R.id.TextDate_name);
+        TextView names=(TextView) findViewById(R.id.textDate_name);
         TextView ids=(TextView) findViewById(R.id.TextDate_id);
+        TextView sex=(TextView) findViewById(R.id.TextDate_sex);
+        TextView age=(TextView) findViewById(R.id.TextDate_age);
+        TextView xinZuo=(TextView) findViewById(R.id.TextDate_xinZuo);
+
         SharedPreferences.Editor editor = getSharedPreferences("data",MODE_PRIVATE).edit();
         editor.putString("name",names.getText().toString());
         editor.putString("id",ids.getText().toString());
+        editor.putString("sex",sex.getText().toString());
+        editor.putString("age",age.getText().toString());
+        editor.putString("xinZuo",xinZuo.getText().toString());
+
         editor.apply();
     }
     public void readData(){//读出之前保存的数据
-        TextView names=(TextView) findViewById(R.id.TextDate_name);
+        TextView names=(TextView) findViewById(R.id.textDate_name);
         TextView ids=(TextView) findViewById(R.id.TextDate_id);
+        TextView sex1=(TextView) findViewById(R.id.TextDate_sex);
+        TextView age1=(TextView) findViewById(R.id.TextDate_age);
+        TextView xinZuo1=(TextView) findViewById(R.id.TextDate_xinZuo);
         ImageView images=(ImageView)findViewById(R.id.imageView_head);
         SharedPreferences pref = getSharedPreferences("data",MODE_PRIVATE);
         String name = pref.getString("name","请输入");
-        String id = pref.getString("id","请输入");
+        String id = pref.getString("id","2019000000");
+        String sex = pref.getString("sex","你猜！");
+        String age = pref.getString("age","18");
+        String xinZuo = pref.getString("xinZuo","肉做的");
+
         int picture =pref.getInt("picture",R.drawable.a4);
+
         names.setText(name);
         ids.setText(id);
+        sex1.setText(sex);
+        age1.setText(age);
+        xinZuo1.setText(xinZuo);
         images.setImageResource(picture);
     }
     }
